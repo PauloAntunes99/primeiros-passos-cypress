@@ -1,9 +1,16 @@
 describe('saucedemo', () => {
+
+  const selectorlist = {
+    usernamefield: "[data-test='username']",
+    passwordFild: "[data-test='password']",
+    loginButton: "[data-test='login-button']"
+  }
+
   it('teste de fumaca ', () => {
     cy.visit('https://www.saucedemo.com/')
-    cy.get('[data-test="username"]').type("standard_user")
-    cy.get('[data-test="password"]').type("secret_sauce")
-    cy.get('[data-test="login-button"]').click()
+    cy.get(selectorlist.usernamefield).type("standard_user")
+    cy.get(selectorlist.passwordFild).type("secret_sauce")
+    cy.get(selectorlist.loginButton).click()
     cy.get('[data-test="title"]').contains("Products")
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
     cy.get('[data-test="shopping-cart-link"]').click()
