@@ -16,3 +16,4 @@ describe('saucedemo', () => {
     cy.get('[data-test="complete-header"]').contains("Thank you for your order!")
   })
 })
+
