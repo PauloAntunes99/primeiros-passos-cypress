@@ -14,4 +14,4 @@ describe('orange hrm tests', () => {
     cy.get('.oxd-button').click()
     cy.get('.oxd-alert-content')
   })
-})
+})  
