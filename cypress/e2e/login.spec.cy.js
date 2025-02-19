@@ -1,7 +1,6 @@
+
+import userData from "../fixtures/user-data.json"
 describe('orange hrm tests', () => {
-
-
-
 
 
   const selectorlist = {
@@ -25,7 +24,7 @@ const userData ={
   
 
   it('login sucess', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorlist.usernamefield).type(userData.userSucess.username)
     cy.get(selectorlist.passwordFild).type(userData.userSucess.password)
     cy.get(selectorlist.loginButton).click()
