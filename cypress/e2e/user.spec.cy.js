@@ -36,8 +36,16 @@ describe('orange hrm tests', () => {
     cy.get(selectorlist.driverLicense).clear().type(userData.driverdriverLicense.number)
     cy.get(selectorlist.licenseDate).clear().type("2025-05-25")
     cy.get(selectorlist.buttonClose).click()
+    cy.get('.oxd-form[data-v-6653c066] .oxd-grid-3 > div:nth-of-type(1) .oxd-select-text-input').click()
+    cy.get(':nth-child(27) > span').click()
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click()
+    cy.get(':nth-child(3) > span').click()
+    cy.get('.orangehrm-custom-fields i:nth-of-type(1)').click()
+    cy.get('.oxd-select-dropdown > :nth-child(7)').click()
+    cy.get('.orangehrm-custom-fields .oxd-grid-3 > div:nth-of-type(2)').type("95")  
     cy.get('.oxd-button[data-v-6653c066]').click()
-    cy.get('.oxd-form-actions[data-v-6653c066]').click()
+   
+   
 
 
    
