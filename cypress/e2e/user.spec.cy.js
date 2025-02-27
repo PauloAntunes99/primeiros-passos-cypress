@@ -12,8 +12,10 @@ describe('orange hrm tests', () => {
     myMidName:':nth-child(2) > :nth-child(2) > .oxd-input',
     myLastName:':nth-child(3) > :nth-child(2) > .oxd-input',
     myId:':nth-child(3) > :nth-child(2) > .oxd-input',
-    myOtherId:':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
-
+    myOtherId:':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
+   driverLicense:'.oxd-form[data-v-6653c066] > .oxd-form-row > div:nth-of-type(2) [data-v-957b4417] > .oxd-input',
+   licenseDate:".oxd-form[data-v-6653c066] .oxd-grid-3 > div:nth-of-type(2) [placeholder='yyyy-dd-mm']",
+   buttonClose:'.--close'
   }
 
 
@@ -26,13 +28,19 @@ describe('orange hrm tests', () => {
     cy.location("pathname").should('equal','/web/index.php/dashboard/index')
     cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains("Dashboard")
     cy.get(selectorlist.myInfoBotton).click()
-    cy.get(selectorlist.myName).type(userData.info.myName)
-    cy.get(selectorlist.myMidName).type(userData.info.myMidName)
-    cy.get(selectorlist.myLastName).type(userData.info.myLastName)
-    cy.get(selectorlist.myId).type(userData.info.myId)
-    cy.get(selectorlist.myOtherId).type(userData.info.myOtherId)
+    cy.get(selectorlist.myName).clear().type(userData.info.myName)
+    cy.get(selectorlist.myMidName).clear().type(userData.info.myMidName)
+    cy.get(selectorlist.myLastName).clear().type(userData.info.myLastName)
+    cy.get(selectorlist.myId).clear().type(userData.info.myId)
+    cy.get(selectorlist.myOtherId).clear().type(userData.info.myOtherId)
+    cy.get(selectorlist.driverLicense).clear().type(userData.driverdriverLicense.number)
+    cy.get(selectorlist.licenseDate).clear().type("2025-05-25")
+    cy.get(selectorlist.buttonClose).click()
+    cy.get('.oxd-button[data-v-6653c066]').click()
+    cy.get('.oxd-form-actions[data-v-6653c066]').click()
 
 
+   
   })
   it('login fail', () => {
     cy.visit('/auth/login')
