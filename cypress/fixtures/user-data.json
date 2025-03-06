@@ -1,25 +1,24 @@
-
 {
  
-    "userSucess":{
-       "username":"admin",
-       "password":"admin123"
-     },
+  "userSucess":{
+     "username":"admin",
+     "password":"admin123"
+   },
 
-    "userFail":{
-        "username":"teste",
-        "password":"teste"
-    },
-    
-    "info":{
-        "myName":"paulo",
-        "myMidName":"silva",
-        "myLastName":"Antunes",
-        "myId":"123456",
-        "myOtherId":"6321"
-    },
-    
-    "driverdriverLicense":{
-        "number":"99999"
-    }
-    }
+  "userFail":{
+      "username":"teste",
+      "password":"teste"
+  },
+  
+  "info":{
+      "myName":"paulo",
+      "myMidName":"silva",
+      "myLastName":"Antunes",
+      "myId":"123456",
+      "myOtherId":"6321"
+  },
+  
+  "driverdriverLicense":{
+      "number":"99999"
+  }
+  }
